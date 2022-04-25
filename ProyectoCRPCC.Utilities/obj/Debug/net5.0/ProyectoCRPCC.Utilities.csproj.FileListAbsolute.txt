@@ -1,0 +1,12 @@
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\bin\Debug\net5.0\ProyectoCRPCC.Utilities.deps.json
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\bin\Debug\net5.0\ProyectoCRPCC.Utilities.dll
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\bin\Debug\net5.0\ProyectoCRPCC.Utilities.pdb
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\obj\Debug\net5.0\ProyectoCRPCC.Utilities.csproj.AssemblyReference.cache
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\obj\Debug\net5.0\ProyectoCRPCC.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\obj\Debug\net5.0\ProyectoCRPCC.Utilities.AssemblyInfoInputs.cache
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\obj\Debug\net5.0\ProyectoCRPCC.Utilities.AssemblyInfo.cs
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\obj\Debug\net5.0\ProyectoCRPCC.Utilities.csproj.CoreCompileInputs.cache
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\obj\Debug\net5.0\ProyectoCRPCC.Utilities.dll
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\obj\Debug\net5.0\refint\ProyectoCRPCC.Utilities.dll
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\obj\Debug\net5.0\ProyectoCRPCC.Utilities.pdb
+C:\ProyectoCRPCC\ProyectoCRPCC.Utilities\obj\Debug\net5.0\ref\ProyectoCRPCC.Utilities.dll

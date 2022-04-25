@@ -1,0 +1,15 @@
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\bin\Debug\net5.0\ProyectoCRPCC.Data.deps.json
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\bin\Debug\net5.0\ProyectoCRPCC.Data.dll
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\bin\Debug\net5.0\ProyectoCRPCC.Data.pdb
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\bin\Debug\net5.0\ProyectoCRPCC.Models.dll
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\bin\Debug\net5.0\ProyectoCRPCC.Models.pdb
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\obj\Debug\net5.0\ProyectoCRPCC.Data.csproj.AssemblyReference.cache
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\obj\Debug\net5.0\ProyectoCRPCC.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\obj\Debug\net5.0\ProyectoCRPCC.Data.AssemblyInfoInputs.cache
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\obj\Debug\net5.0\ProyectoCRPCC.Data.AssemblyInfo.cs
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\obj\Debug\net5.0\ProyectoCRPCC.Data.csproj.CoreCompileInputs.cache
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\obj\Debug\net5.0\ProyectoCRPCC.Data.csproj.CopyComplete
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\obj\Debug\net5.0\ProyectoCRPCC.Data.dll
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\obj\Debug\net5.0\refint\ProyectoCRPCC.Data.dll
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\obj\Debug\net5.0\ProyectoCRPCC.Data.pdb
+C:\ProyectoCRPCC\ProyectoCRPCC.Data\obj\Debug\net5.0\ref\ProyectoCRPCC.Data.dll

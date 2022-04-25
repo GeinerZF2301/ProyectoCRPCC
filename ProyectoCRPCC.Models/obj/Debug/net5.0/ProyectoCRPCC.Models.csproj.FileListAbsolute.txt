@@ -1,0 +1,12 @@
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\bin\Debug\net5.0\ProyectoCRPCC.Models.deps.json
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\bin\Debug\net5.0\ProyectoCRPCC.Models.dll
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\bin\Debug\net5.0\ProyectoCRPCC.Models.pdb
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\obj\Debug\net5.0\ProyectoCRPCC.Models.csproj.AssemblyReference.cache
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\obj\Debug\net5.0\ProyectoCRPCC.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\obj\Debug\net5.0\ProyectoCRPCC.Models.AssemblyInfoInputs.cache
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\obj\Debug\net5.0\ProyectoCRPCC.Models.AssemblyInfo.cs
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\obj\Debug\net5.0\ProyectoCRPCC.Models.csproj.CoreCompileInputs.cache
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\obj\Debug\net5.0\ProyectoCRPCC.Models.dll
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\obj\Debug\net5.0\refint\ProyectoCRPCC.Models.dll
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\obj\Debug\net5.0\ProyectoCRPCC.Models.pdb
+C:\ProyectoCRPCC\ProyectoCRPCC.Models\obj\Debug\net5.0\ref\ProyectoCRPCC.Models.dll
