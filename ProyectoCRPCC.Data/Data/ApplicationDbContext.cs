@@ -22,8 +22,7 @@ namespace ProyectoCRPCC.Data
         public DbSet<ServicioDetalle> ServicioDetalles { get; set; }
         public DbSet<ServiciosCliente> ServiciosClientes{ get; set; }
         public DbSet<ServiciosClienteDetalle> ServiciosClienteDetalles { get; set; }
-       
-
+        public DbSet<UsuarioAplicacion> UsuarioAplicacion { get; set; }
 
 
 

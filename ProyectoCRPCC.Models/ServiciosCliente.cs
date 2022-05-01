@@ -19,6 +19,7 @@ namespace ProyectoCRPCC.Models
         [Required]
         [Display(Name = "Fecha: ")]
         [DisplayFormat(ApplyFormatInEditMode = false, DataFormatString = "{0:MM-dd-yyyy HH:mm}")]
+        
         public DateTime Fecha { get; set; }
 
         //Llaves foraneas

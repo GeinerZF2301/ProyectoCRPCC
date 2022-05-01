@@ -427,6 +427,10 @@ C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ProyectoCRPCC.TagHelpers.input.c
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ProyectoCRPCC.TagHelpers.output.cache
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ProyectoCRPCC.RazorCoreGenerate.cache
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Servicios\Views\Home\Index.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Servicios\Views\Home\Privacy.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Servicios\Views\_ViewImports.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Servicios\Views\_ViewStart.cshtml.g.cs
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -442,7 +446,3 @@ C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\refint\ProyectoCRPCC.dll
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ProyectoCRPCC.pdb
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ProyectoCRPCC.genruntimeconfig.cache
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ref\ProyectoCRPCC.dll
-C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Servicios\Views\Home\Index.cshtml.g.cs
-C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Servicios\Views\Home\Privacy.cshtml.g.cs
-C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Servicios\Views\_ViewImports.cshtml.g.cs
-C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Servicios\Views\_ViewStart.cshtml.g.cs
