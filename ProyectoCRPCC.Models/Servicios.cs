@@ -21,7 +21,8 @@ namespace ProyectoCRPCC.Models
         public string Descripcion { get; set; }
         [Required]
         [Display(Name ="Estado")]
-        public string Estado { get; set; }
+        public bool Estado { get; set; }
+        public string ImageUrl { get; set; }
 
         public int IdCategoria { get; set; }
         [ForeignKey("IdCategoria")]

@@ -1,0 +1,153 @@
+﻿@model ProyectoCRPCC.Models.ViewModels.ServiciosVM
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var titulo = "Crear Servicio";
+    var imagen = "";
+}
+<style>
+    input {
+        max-width: 7000px;
+        min-width: 150px;
+    }
+
+    .etiqueta {
+        width: 160px;
+        text-align: right;
+    }
+</style>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="row p-3 border-0">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    </div>
+    @if (Model.Servicios.Id != 0)
+    {
+        // Actualizar
+        titulo = "Actualizar Compania";
+        imagen = Model.Servicios.ImageUrl;
+        <input type="hidden" asp-for="Servicios.Id" />
+    }
+
+<div class="card">
+    <div class="card-body">
+        <hr>
+        <div class="card-header bg-info text-info">
+            <h4 class="card-header-title text-white text-center fw-bold">
+                @titulo
+            </h4>
+        </div>
+        <hr>
+
+        <div class="input-group mt-2">
+            <span class="input-group-text etiqueta fw-bold" name="nombreservicio" id="">Nombre Servicio: </span>
+            <input asp-for="Servicios.NombreServicio" class="form-control" aria-label="NombreServicio">
+            <span asp-validation-for="Servicios.NombreServicio" class="text-danger"></span>
+        </div>
+
+        <div class="input-group mt-2">
+            <span class="input-group-text etiqueta" name="Descripcion" id="Descripcion">Descripción: </span>
+            <input asp-for="Servicios.Descripcion" class="form-control texto" aria-label="Descripcion">
+            <span asp-validation-for="Servicios.Descripcion" class="text-danger"></span>
+        </div>
+        
+         
+        <div class="input-group mt-2">
+                    <span class="input-group-text etiqueta" name="Categoria" id="Categoria">Categoria: </span>
+                    @Html.DropDownListFor(c => c.Servicios.IdCategoria,
+                                               Model.CategoriaLista, "Seleccione",
+                                               new { @class = "form-select" })
+                    <span asp-validation-for="Servicios.IdCategoria" class="text-danger"></span>
+         </div>
+         <div class="input-group mt-2">
+                    <span class="input-group-text etiqueta" name="Estado"
+                          id="Estado">Estado:</span>
+                    <select asp-for="Servicios.Estado" class="form-select">
+                        <option value=true>Activo</option>
+                        <option value=false>Inactivo</option>
+                    </select>
+         </div>
+
+        <h5 class="text-center text-primary fw-bold fs-6">Seleccionar imagen del Servicio</h5>
+        <div class="input-group mt-2">
+            <input type="file" name="files" id="files" multiple class="form-control" />
+            <span asp-validation-for="Servicios.ImageUrl" class="text-danger"></span>
+        </div>
+        <div class="col-12 form-control mt-2" style="border:none;">
+            @if (!imagen.Equals(""))
+            {
+                <img id="image" src="@imagen"
+                     class="card-img-top img-fluid rounded"
+                     style="width: 200px; height: 150px;" />
+            }
+            else
+            {
+                <img id="image" src="~/imagenes/servicios/no-imagen.jpg"
+                     class="card-img-bottom img-fluid rounded"
+                     style="width: 200px; height: 150px;" />
+            }
+
+
+        </div>
+        <div class="col-8 pt-4">
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    @if (Model.Servicios.Id != 0)
+                    {
+                        <partial name="_BotonesActualizarRegresar" model="Model.Servicios.Id" />
+                    }
+                    else
+                    {
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" onclick="return validarEntrada()" class="btn btn-primary form-control">Crear</button>
+                            </div>
+                            <div class="col">
+                                <a asp-action="Index" class="btn btn-success form-control">Regresar</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        @*@if (Model.Compania.Id != 0)
+            //{
+            <div class="col-3">
+                <img src="@Model.Compania.LogoUrl" style="width:100%; border-radius:5px; border:1px solid #bbb9b9" />
+            </div>
+        }*@
+        <br />   <br />
+        <div class="form-group row pt-3">
+        </div>
+    </div>
+</div>
+</form>
+
+ @section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        function validarEntrada() {
+            if (document.getElementById("escogerImg").value == "") {
+                swal("Error", "Seleccione una Imagen", "error");
+                return false;
+            }
+            return true;
+        }
+        $("#files").change(function () {
+            readURL(this);
+        });
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#image').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}
+
