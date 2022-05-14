@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoCRPCC.Data.Repositorio.IRepositorio
 {
-    internal interface IUnidadTrabajo : IDisposable
+    public interface IUnidadTrabajo : IDisposable
     {
         IClienteRepositorio Cliente { get; }
         IEmpleadoRepositorio Empleado { get; }

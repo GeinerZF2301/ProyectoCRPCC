@@ -11,7 +11,6 @@ namespace ProyectoCRPCC.Models.ViewModels
     {
         public Servicios Servicios { get; set; }
         public ServicioDetalle ServicioDetalle { get; set; }
-        public List<ServicioDetalle> ServicioDetalles { get; set; }
         public IEnumerable<SelectListItem> CategoriaLista { get; set; }
         
     }

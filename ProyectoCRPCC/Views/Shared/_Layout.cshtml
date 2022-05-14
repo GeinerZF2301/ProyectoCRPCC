@@ -3,32 +3,147 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ProyectoCRPCC</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@ViewData["Title"] - WebInventario</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <style>
+        .navbar, .container {
+            font-size: 20px;
+            font-family: Roboto;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-5 fixed-top">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProyectoCRPCC</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        @*@if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Inventario))*@
+                        
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Mantenimiento
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                   @* @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Registrador))*@
+                                    
+                                        <a class="dropdown-item"
+                                           asp-area="Admin"
+                                           asp-controller="Bodega"
+                                           asp-action="Index">
+                                            <i class="fas fa-home"></i>
+                                            Bodegas
+                                        </a>
+                                        <div class="dropdown-divider bg-light"></div>
+
+                                        <a class="dropdown-item"
+                                           asp-area="Admin"
+                                           asp-controller="Categoria"
+                                           asp-action="Index">
+                                            <i class="fas fa-cogs"></i>
+                                            Categorías
+                                        </a>
+                                        <div class="dropdown-divider bg-light"></div>
+                                        <a class="dropdown-item"
+                                           asp-area="Admin"
+                                           asp-controller="Servicios"
+                                           asp-action="Index">
+                                            <i class="fas fa-award"></i>
+                                            Servicios
+                                        </a>
+
+                                        <div class="dropdown-divider bg-light"></div>
+
+                                        <a class="dropdown-item"
+                                           asp-area="Admin"
+                                           asp-controller="Proveedor"
+                                           asp-action="Index">
+                                            <i class="fas fa-home"></i>
+                                            Proveedor
+                                        </a>
+                                        <div class="dropdown-divider bg-light"></div>
+                                    
+                                   @* @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Inventario))*@
+                                    
+                                        <a class="dropdown-item"
+                                           asp-area="Admin"
+                                           asp-controller="Producto"
+                                           asp-action="Index">
+                                            <i class="fas fa-cog"></i>
+                                            Productos
+                                        </a>
+                                    
+                                </div>
+                            </li>
+                        
+                      @* @* @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Inventario))*@
+                        
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-area="Inventario"
+                                   asp-controller="Inventario"
+                                   asp-action="Index">
+                                    Inventario
+                                </a>
+                            </li>
+                        
+                        @*@if (User.IsInRole(DS.Role_Admin))*@
+                        
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-area="Admin"
+                                   asp-controller="Usuario"
+                                   asp-action="Index">
+                                    Usuarios
+                                </a>
+                            </li>
+                        
+                        @*@if (User.IsInRole(DS.Role_Admin))*@
+                        
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-area="Admin"
+                                   asp-controller="Compania"
+                                   asp-action="Index">
+                                    Compañías
+                                </a>
+                            </li>
+                        
+                        @*@if (User.IsInRole(DS.Role_Admin)
+                         || User.IsInRole(DS.Role_Inventario)
+                         || User.IsInRole(DS.Role_Ventas))*@
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Consultas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Reportes</a>
+                            </li>
+                        
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
+
             </div>
         </nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -36,14 +151,19 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted bg-primary text-white-50 fixed-bottom">
         <div class="container">
-            &copy; 2022 - ProyectoCRPCC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - Costa Rican Pest Control Company, Costa Rica.
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/e19c476714.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

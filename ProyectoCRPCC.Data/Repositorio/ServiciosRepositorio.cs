@@ -21,8 +21,14 @@ namespace ProyectoCRPCC.Data.Repositorio
             var serviciosDb = _db.Servicios.FirstOrDefault(b => b.Id == servicios.Id);
             if (serviciosDb != null)
             {
+                if(servicios.ImageUrl != null)
+                {
+                    serviciosDb.ImageUrl = servicios.ImageUrl;
+                }
                 serviciosDb.NombreServicio = servicios.NombreServicio;
+                serviciosDb.Descripcion = servicios.Descripcion;
                 serviciosDb.Estado = servicios.Estado;
+                serviciosDb.IdCategoria = servicios.IdCategoria;
             }
         }
     }
