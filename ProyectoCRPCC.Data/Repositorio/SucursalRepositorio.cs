@@ -22,6 +22,7 @@ namespace ProyectoCRPCC.Data.Repositorio
             if (sucursalDb != null)
             {
                 sucursalDb.Nombre = sucursal.Nombre;
+                sucursalDb.Direccion = sucursal.Direccion;
                 sucursalDb.Estado = sucursal.Estado;
             }
         }

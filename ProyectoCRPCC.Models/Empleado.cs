@@ -27,8 +27,8 @@ namespace ProyectoCRPCC.Models
         [Required]
         [MaxLength(10)]
         [Display(Name = "Cédula : ")]
-        public int Cedula { get; set; }
-        [Required]
+        public string Cedula { get; set; }
+        [Required(ErrorMessage = "La cédula debe tener 10 caracteres como máximo")]
         [StringLength(100)]
         [Display(Name = "Direccion: ")]
         public string Direccion { get; set; }
@@ -41,7 +41,7 @@ namespace ProyectoCRPCC.Models
         [MaxLength(20)]
         [Display(Name = "Número de Teléfono: ")]
         public string NumeroTelefono { get; set; }
-        
+        public string ImageUrl { get; set; }
         //Llave foranea
         public int SucursalId { get; set; }
         [ForeignKey("SucursalId")]
