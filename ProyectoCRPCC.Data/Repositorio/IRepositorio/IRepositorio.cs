@@ -10,6 +10,7 @@ namespace ProyectoCRPCC.Data.Repositorio.IRepositorio
     public interface IRepositorio<T> where T : class
     {
         T Obtener(int id); //Devolverá un registro según su id
+        T ObtenerRegistro(string nombre); //Devuelve un registro segun su nombre
         IEnumerable<T> ObtenerTodos(
             Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,

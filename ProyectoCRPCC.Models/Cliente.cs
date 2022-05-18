@@ -25,9 +25,9 @@ namespace ProyectoCRPCC.Models
         [Display(Name = "Apellido 2: ")]
         public string Apellido2 { get; set; }
         [Required]
-        [MaxLength(10)]
+        [StringLength(10)]
         [Display(Name = "Cédula : ")]
-        public int Cedula { get; set; }
+        public string Cedula { get; set; }
         [Required]
         [StringLength(100)]
         [Display(Name = "Direccion: ")]
@@ -45,6 +45,7 @@ namespace ProyectoCRPCC.Models
         [MaxLength(20)]
         [Display(Name = "Número de Teléfono: ")]
         public string NumeroTelefono { get; set; }
+        public string ImageUrl { get; set; }
         //Llaves foraneas
         public int ServicioId { get; set; }
         [ForeignKey("ServicioId")]

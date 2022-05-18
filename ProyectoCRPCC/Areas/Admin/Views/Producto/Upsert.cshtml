@@ -1,0 +1,153 @@
+﻿@model Inventory.Models.ViewModels.ProductoVM
+@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    var titulo = "Crear Producto";
+    var imagen = "";
+}
+<style>
+    input {
+        max-width: 7000px;
+        min-width: 150px;
+    }
+
+    .etiqueta {
+        width: 160px;
+        text-align: right;
+    }
+</style>
+<form method="post" enctype="multipart/form-data">
+    <div class="row p-3 border-0">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    </div>
+    @if (Model.Producto.Id != 0)
+    {
+        // Actualizar
+        titulo = "Actualizar Producto";
+        imagen = Model.Producto.ImageUrl;
+        <input type="hidden" asp-for="Producto.Id" />
+    }
+
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <hr>
+                <div class="card-header bg-info text-info">
+                    <h4 class="card-header-title text-white text-center fw-bold">
+                        @titulo
+                    </h4>
+                </div>
+                <!-- se le puede poner text-muted y mb-3 (margen bottom o mt margen top)  -->
+                <h5 class="card-subtitle text-white text-center bg-info fw-bold p-2 pt-0">
+                    Empresa CRPCC Ltda
+                </h5>
+                <hr>
+
+                <div class="input-group mt-2">
+                    <span class="input-group-text etiqueta fw-bold" name="NumeroSerie" id="">Número de Serie: </span>
+                    <input asp-for="Producto.NumeroSerie" class="form-control" aria-label="NumeroSerie">
+                    <span asp-validation-for="Producto.NumeroSerie" class="text-danger"></span>
+                </div>
+
+                <div class="input-group mt-2">
+                    <span class="input-group-text etiqueta" name="Descripcion" id="Descripcion">Descripción: </span>
+                    <input asp-for="Producto.Descripcion" class="form-control texto" aria-label="Descripcion">
+                    <span asp-validation-for="Producto.Descripcion" class="text-danger"></span>
+                </div>
+
+                <div class="input-group mt-2">
+                    <span class="input-group-text etiqueta" name="Costo" id="Costo">Costo inicial: </span>
+                    <input asp-for="Producto.Costo" class="form-control texto" aria-label="Costo">
+                    <span asp-validation-for="Producto.Costo" class="text-danger"></span>
+                </div>
+                <div class="input-group mt-2">
+                    <span class="input-group-text etiqueta" name="Precio" id="Precio">Precio inicial: </span>
+                    <input asp-for="Producto.Precio" class="form-control texto" aria-label="Precio">
+                    <span asp-validation-for="Producto.Precio" class="text-danger"></span>
+                </div>
+                
+                <h5 class="text-center text-primary fw-bold fs-6">Seleccionar imagen del producto</h5>
+                <div class="input-group mt-2">
+                    <input type="file" name="files" id="files" multiple class="form-control" />
+                    <span asp-validation-for="Producto.ImageUrl" class="text-danger"></span>
+                </div>
+                <div class="col-12 form-control mt-2" style="border:none;">
+                    @if (!imagen.Equals(""))
+                    {
+                        <img id="image" src="@imagen"
+                             class="card-img-top img-fluid rounded"
+                             style="width: 200px; height: 150px;" />
+                    }
+                    else
+                    {
+                        <img id="image" src="~/imagenes/productos/no-imagen.jpg"
+                             class="card-img-bottom img-fluid rounded"
+                             style="width: 200px; height: 150px;" />
+                    }
+                </div>
+                <br />   <br />
+                <div class="row mt-5">
+                    <div class="input-group mt-5">
+                        <span class="input-group-text etiqueta" name="Padre" id="Padre">Padre producto: </span>
+                        @Html.DropDownListFor(c => c.Producto.PadreId, Model.PadreLista, "Seleccione",
+                          new { @class = "form-select" })
+                        <span asp-validation-for="Producto.PadreId" class="text-danger"></span>
+                    </div>
+           </div>
+                <div class="form-group row pt-3">
+                    <div class="col-12">
+                        @if (Model.Producto.Id != 0)
+                        {
+                            <partial name="_BotonesActualizarRegresar" model="Model.Producto.Id" />
+                        }
+                        else
+                        {
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" onclick="return validarEntrada()"
+                                            class="btn btn-primary rounded-pill  form-control">
+                                        <i class="fa fa-plus-circle fa-lg"></i>
+                                        Crear
+                                    </button>
+                                </div>
+
+                                <div class="col">
+                                    <a asp-action="Index" class="btn btn-success rounded-pill  form-control">
+                                        <i class="fa fa-external-link fa-lg"></i>
+                                        Regresar
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        function validarEntrada() {
+            if (document.getElementById("escogerImg").value == "") {
+                swal("Error", "Seleccione una Imagen", "error");
+                return false;
+            }
+            return true;
+        }
+        $("#files").change(function () {
+            readURL(this);
+        });
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#image').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}

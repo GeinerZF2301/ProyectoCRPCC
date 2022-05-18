@@ -19,8 +19,11 @@ namespace ProyectoCRPCC.Data.Repositorio
         public void Actualizar(Empleado empleado)
         {
             var empleadoDb = _db.Empleado.FirstOrDefault(b => b.Id == empleado.Id);
-            if (empleadoDb != null)
-            {
+            if (empleadoDb != null){
+                if(empleado.ImageUrl != null)
+                {
+                   empleadoDb.ImageUrl = empleado.ImageUrl ;
+                }
                 empleadoDb.Nombre = empleado.Nombre;
                 empleadoDb.Apellido1 = empleado.Apellido1;
                 empleadoDb.Apellido2 = empleado.Apellido2;
