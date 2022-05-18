@@ -428,8 +428,14 @@ C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ProyectoCRPCC.TagHelpers.output.
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ProyectoCRPCC.RazorCoreGenerate.cache
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Categoria\Index.cshtml.g.cs
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Categoria\Upsert.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Cliente\Index.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Cliente\Upsert.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Producto\Index.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Producto\Upsert.cshtml.g.cs
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Servicios\Index.cshtml.g.cs
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Servicios\Upsert.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sucursal\Index.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sucursal\Upsert.cshtml.g.cs
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
@@ -454,3 +460,8 @@ C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\refint\ProyectoCRPCC.dll
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ProyectoCRPCC.pdb
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ProyectoCRPCC.genruntimeconfig.cache
 C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\ref\ProyectoCRPCC.dll
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Views\Shared\_BotonConsultarRegresar.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\ConsultaCategoria\Index.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\ConsultaCategoria\Upsert.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Empleado\Index.cshtml.g.cs
+C:\ProyectoCRPCC\ProyectoCRPCC\obj\Debug\net5.0\Razor\Areas\Admin\Views\Empleado\Upsert.cshtml.g.cs

@@ -1,0 +1,92 @@
+﻿@model ProyectoCRPCC.Models.Categoria
+
+@{
+
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    var titulo = "Consulta de Categoria";
+}
+<style>
+    input {
+        max-width: 7000px;
+        min-width: 100px;
+    }
+
+    .etiqueta {
+        width: 200px;
+        text-align: right;
+    }
+</style>
+<form method="post">
+    <div class="row p-3 border-0">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    </div>
+    @if (Model.Id != 0)
+    {
+        // Actualizar
+        titulo = "Consulta de Bodega";
+    }
+    <br />
+    <br />
+    <br />
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <hr>
+                <div class="card-header-pills rounded-circle">
+                    <h4 class="card-header-title text-center font-weight-bolder">
+                        @titulo
+                    </h4>
+                </div>
+
+                <h5 class="card-subtitle text-center">
+                    Web CRPCC
+                </h5>
+
+                <hr>
+
+                <div class="input-group mt-2">
+                    <span class="input-group-text etiqueta" name="Nombre" id="">Nombre: </span>
+                    <input asp-for="Nombre" class="form-control" aria-label="Nombre" readonly>
+                </div>
+              
+                <div class="input-group mt-2">
+                    <span class="input-group-text etiqueta" name="Estado"
+                          id="Estado">Estado:</span>
+                    <select disabled asp-for="Estado" class="form-select" >
+                        <option value=true>Activo</option>
+                        <option value=false>Inactivo</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group row pt-5">
+                    <div class="col-4 offset-8">
+                       
+                        <div class="col">
+                            <a asp-controller="ConsultaCategoria"
+                               asp-action="Index"
+                               class="btn btn-outline-danger rounded-pill form-control">
+                                <i class="fa fa-external-link"> Regresar</i>
+                            </a>
+                        </div>
+                      
+                            
+                        
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-body">
+
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

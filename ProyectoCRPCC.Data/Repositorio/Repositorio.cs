@@ -22,10 +22,14 @@ namespace ProyectoCRPCC.Data.Repositorio
         {
             dbSet.Add(entidad);      // insert into  Table
         }
-
+       
         public T Obtener(int id)
         {
             return dbSet.Find(id);    // select * from 
+        }
+        public T ObtenerRegistro(string nombre)
+        {
+            return dbSet.Find(nombre);    // select * from por nombre
         }
 
         public T ObtenerPrimero(Expression<Func<T, bool>> filter = null, string incluirPropiedades = null)

@@ -19,17 +19,22 @@ namespace ProyectoCRPCC.Data.Repositorio
         public void Actualizar(Cliente cliente)
         {
             var clienteDb = _db.Clientes.FirstOrDefault(b => b.Id == cliente.Id);
-            if (clienteDb != null)
-            {
+            if (clienteDb != null){
+
+                if (cliente.ImageUrl != null)
+                {
+                    clienteDb.ImageUrl = cliente.ImageUrl;
+                }
                 clienteDb.NombreCliente = cliente.NombreCliente;
                 clienteDb.Apellido1 = cliente.Apellido1;
                 clienteDb.Apellido2 = cliente.Apellido2;
                 clienteDb.Cedula= cliente.Cedula;
+                clienteDb.ServicioId = cliente.ServicioId;
                 clienteDb.Direccion = cliente.Direccion;
                 clienteDb.CodigoPostal = cliente.CodigoPostal;
                 clienteDb.Email = cliente.Email;
                 clienteDb.NumeroTelefono  = cliente.NumeroTelefono;
-                clienteDb.ServicioId = cliente.ServicioId;
+               
             }
         }
     }
