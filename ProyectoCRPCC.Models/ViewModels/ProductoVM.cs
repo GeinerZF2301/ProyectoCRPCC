@@ -12,5 +12,6 @@ namespace Inventory.Models.ViewModels
     {
         public Producto Producto { get; set; }
         public IEnumerable<SelectListItem> PadreLista { get; set; }
+        public IEnumerable<Producto> ProductoLista { get; set; }
     }
 }

@@ -24,7 +24,7 @@
     @if (Model.Servicios.Id != 0)
     {
         // Actualizar
-        titulo = "Actualizar Compania";
+        titulo = "Actualizar Servicios";
         imagen = Model.Servicios.ImageUrl;
         <input type="hidden" asp-for="Servicios.Id" />
     }
@@ -32,7 +32,7 @@
 <div class="card">
     <div class="card-body">
         <hr>
-        <div class="card-header bg-info text-info">
+        <div class="card-header text-info" style="background-color: #000000;">
             <h4 class="card-header-title text-white text-center fw-bold">
                 @titulo
             </h4>
@@ -103,7 +103,7 @@
                                 <button type="submit" onclick="return validarEntrada()" class="btn btn-primary form-control">Crear</button>
                             </div>
                             <div class="col">
-                                <a asp-action="Index" class="btn btn-success form-control">Regresar</a>
+                                <a asp-action="Index" class="btn btn-secondary form-control">Regresar</a>
                             </div>
                         </div>
                     }

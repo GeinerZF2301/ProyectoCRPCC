@@ -7,8 +7,13 @@
     </div>
     <div class="row">
         <div class="col-12 col-md-6 text-right">
-            <a class="btn btn-primary rounded-pill" asp-action="Upsert">
+            <a class="btn btn-success rounded-pill" asp-action="Upsert">
                 <i class="fas fa-plus"> Crear nuevo producto </i>
+            </a>
+            <a asp-action="ImprimirProductos" class="btn btn-primary"
+               asp-route-id="@Model" target="_blank">
+                <i class="fas fa-print"></i>
+                Imprimir
             </a>
         </div>
     </div>

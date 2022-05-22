@@ -1,3 +1,4 @@
+using InventoryWeb.Utilities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,13 +35,18 @@ namespace ProyectoCRPCC
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
-            //services.AddSingleton<IEmailSender, EmailSender>();
+
+            services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
+                  .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
+            services.AddSingleton<IEmailSender, EmailSender>();
             services.AddScoped<IUnidadTrabajo, UnidadTrabajo>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
         }
 
@@ -73,6 +79,8 @@ namespace ProyectoCRPCC
                     pattern: "{area=Servicios}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            Rotativa.AspNetCore.RotativaConfiguration.Setup(env.WebRootPath,
+                    "..\\Rotativa\\Windows\\");
         }
     }
 }

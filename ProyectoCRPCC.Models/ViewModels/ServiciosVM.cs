@@ -10,7 +10,7 @@ namespace ProyectoCRPCC.Models.ViewModels
     public class ServiciosVM
     {
         public Servicios Servicios { get; set; }
-        public ServicioDetalle ServicioDetalle { get; set; }
+        
         public IEnumerable<SelectListItem> CategoriaLista { get; set; }
         
     }

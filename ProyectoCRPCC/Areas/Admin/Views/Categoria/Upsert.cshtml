@@ -21,22 +21,18 @@
     @if (Model.Id != 0)
     {
         // Actualizar
-        titulo = "Actualización de Categoria";
+        titulo = "Actualizar Categoria";
     }
     <div class="col-md-8">
         <div class="card">
             <div class="card-body">
-                <hr>
-                <div class="card-header-pills rounded-circle">
-                    <h4 class="card-header-title text-primary text-center fw-bold">
+               <hr>
+                <div class="card-header text-info" style="background-color: #000000;">
+                    <h4 class="card-header-title text-white text-center fw-bold">
                         @titulo
                     </h4>
                 </div>
-                <!-- se le puede poner text-muted y mb-3 (margen bottom o mt margen top)  -->
-                <h5 class="card-subtitle text-primary text-center">
-                    CRPCC
-                </h5>
-                <hr>
+             <hr>
 
                 <div class="input-group mt-2">
                     <span class="input-group-text etiqueta" name="Nombre" id="">Nombre: </span>
