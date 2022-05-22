@@ -96,7 +96,7 @@
             <span asp-validation-for="Cliente.ImageUrl" class="text-danger"></span>
         </div>
         <div class="col-12 form-control mt-2" style="border:none;">
-            @if (!imagen.Equals(""))
+            @if (!imagen.Equals("") || imagen != null)
             {
                 <img id="image" src="@imagen"
                      class="card-img-top img-fluid rounded"
@@ -108,8 +108,6 @@
                      class="card-img-bottom img-fluid rounded"
                      style="width: 200px; height: 150px;" />
             }
-
-
         </div>
         <div class="col-8 pt-4">
             <div class="form-group row">

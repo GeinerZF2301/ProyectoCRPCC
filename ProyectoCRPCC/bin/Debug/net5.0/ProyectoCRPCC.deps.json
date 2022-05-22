@@ -43,6 +43,7 @@
           "ProyectoCRPCC.Data": "1.0.0",
           "ProyectoCRPCC.Models": "1.0.0",
           "ProyectoCRPCC.Utilities": "1.0.0",
+          "Rotativa.AspNetCore": "1.2.0",
           "Microsoft.AspNetCore.Antiforgery.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -58,7 +59,7 @@
           "Microsoft.AspNetCore.Components.Web": "5.0.0.0",
           "Microsoft.AspNetCore.Connections.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.CookiePolicy": "5.0.0.0",
-          "Microsoft.AspNetCore.Cors": "5.0.0.0",
+          "Microsoft.AspNetCore.Cors.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.DataProtection.Abstractions.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.DataProtection.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.DataProtection.Extensions": "5.0.0.0",
@@ -80,21 +81,21 @@
           "Microsoft.AspNetCore.HttpOverrides": "5.0.0.0",
           "Microsoft.AspNetCore.HttpsPolicy": "5.0.0.0",
           "Microsoft.AspNetCore.Identity": "5.0.0.0",
-          "Microsoft.AspNetCore.Localization": "5.0.0.0",
+          "Microsoft.AspNetCore.Localization.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Localization.Routing": "5.0.0.0",
           "Microsoft.AspNetCore.Metadata": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.Abstractions.Reference": "5.0.0.0",
-          "Microsoft.AspNetCore.Mvc.ApiExplorer": "5.0.0.0",
+          "Microsoft.AspNetCore.Mvc.ApiExplorer.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.Core.Reference": "5.0.0.0",
-          "Microsoft.AspNetCore.Mvc.Cors": "5.0.0.0",
+          "Microsoft.AspNetCore.Mvc.Cors.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.DataAnnotations.Reference": "5.0.0.0",
-          "Microsoft.AspNetCore.Mvc": "5.0.0.0",
+          "Microsoft.AspNetCore.Mvc.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.Formatters.Json.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.Formatters.Xml": "5.0.0.0",
-          "Microsoft.AspNetCore.Mvc.Localization": "5.0.0.0",
-          "Microsoft.AspNetCore.Mvc.Razor": "5.0.0.0",
-          "Microsoft.AspNetCore.Mvc.RazorPages": "5.0.0.0",
-          "Microsoft.AspNetCore.Mvc.TagHelpers": "5.0.0.0",
+          "Microsoft.AspNetCore.Mvc.Localization.Reference": "5.0.0.0",
+          "Microsoft.AspNetCore.Mvc.Razor.Reference": "5.0.0.0",
+          "Microsoft.AspNetCore.Mvc.RazorPages.Reference": "5.0.0.0",
+          "Microsoft.AspNetCore.Mvc.TagHelpers.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.ViewFeatures.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Razor.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Razor.Runtime.Reference": "5.0.0.0",
@@ -136,9 +137,9 @@
           "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions": "5.0.0.0",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "5.0.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions.Reference": "5.0.0.0",
-          "Microsoft.Extensions.FileProviders.Composite": "5.0.0.0",
+          "Microsoft.Extensions.FileProviders.Composite.Reference": "5.0.0.0",
           "Microsoft.Extensions.FileProviders.Physical": "5.0.0.0",
-          "Microsoft.Extensions.FileSystemGlobbing": "5.0.0.0",
+          "Microsoft.Extensions.FileSystemGlobbing.Reference": "5.0.0.0",
           "Microsoft.Extensions.Hosting.Abstractions.Reference": "5.0.0.0",
           "Microsoft.Extensions.Hosting": "5.0.0.0",
           "Microsoft.Extensions.Http": "5.0.0.0",
@@ -370,6 +371,15 @@
           "Microsoft.AspNetCore.Authorization": "2.2.0"
         }
       },
+      "Microsoft.AspNetCore.Cors/2.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Extensions": "2.2.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Options": "5.0.0"
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/5.0.17": {
         "runtime": {
           "lib/net5.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -520,10 +530,36 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Localization/2.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Extensions": "2.2.0",
+          "Microsoft.Extensions.Localization.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Options": "5.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Mvc/2.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.Cors": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Localization": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.RazorPages": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.TagHelpers": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "Microsoft.Extensions.Caching.Memory": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2"
+        }
+      },
       "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Routing.Abstractions": "2.2.0",
           "Microsoft.Net.Http.Headers": "2.2.0"
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.ApiExplorer/2.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0"
         }
       },
       "Microsoft.AspNetCore.Mvc.Core/2.2.0": {
@@ -545,6 +581,12 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         }
       },
+      "Microsoft.AspNetCore.Mvc.Cors/2.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Cors": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0"
+        }
+      },
       "Microsoft.AspNetCore.Mvc.DataAnnotations/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
@@ -556,6 +598,25 @@
         "dependencies": {
           "Microsoft.AspNetCore.JsonPatch": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.0"
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Localization/2.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Localization": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.Razor": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2",
+          "Microsoft.Extensions.Localization": "2.2.0"
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Razor/2.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Razor.Extensions": "5.0.14",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "Microsoft.AspNetCore.Razor.Runtime": "2.2.0",
+          "Microsoft.CodeAnalysis.CSharp": "3.8.0",
+          "Microsoft.CodeAnalysis.Razor": "5.0.14",
+          "Microsoft.Extensions.Caching.Memory": "5.0.0",
+          "Microsoft.Extensions.FileProviders.Composite": "2.0.0"
         }
       },
       "Microsoft.AspNetCore.Mvc.Razor.Extensions/5.0.14": {
@@ -587,6 +648,21 @@
         },
         "compile": {
           "lib/net5.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.RazorPages/2.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Razor": "2.0.1"
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.TagHelpers/2.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Razor": "2.0.1",
+          "Microsoft.AspNetCore.Razor.Runtime": "2.2.0",
+          "Microsoft.AspNetCore.Routing.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Caching.Memory": "5.0.0",
+          "Microsoft.Extensions.FileSystemGlobbing": "2.0.0",
+          "Microsoft.Extensions.Primitives": "5.0.0"
         }
       },
       "Microsoft.AspNetCore.Mvc.ViewFeatures/2.2.0": {
@@ -1120,6 +1196,11 @@
           "Microsoft.Extensions.Primitives": "5.0.0"
         }
       },
+      "Microsoft.Extensions.FileProviders.Composite/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "5.0.0"
+        }
+      },
       "Microsoft.Extensions.FileProviders.Embedded/5.0.17": {
         "dependencies": {
           "Microsoft.Extensions.FileProviders.Abstractions": "5.0.0"
@@ -1134,6 +1215,7 @@
           "lib/net5.0/Microsoft.Extensions.FileProviders.Embedded.dll": {}
         }
       },
+      "Microsoft.Extensions.FileSystemGlobbing/2.0.0": {},
       "Microsoft.Extensions.Hosting.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
@@ -1531,6 +1613,20 @@
         },
         "compile": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Rotativa.AspNetCore/1.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc": "2.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Rotativa.AspNetCore.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Rotativa.AspNetCore.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -2526,7 +2622,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
-          "ProyectoCRPCC.Models": "1.0.0"
+          "ProyectoCRPCC.Models": "1.0.0",
+          "Rotativa.AspNetCore": "1.2.0"
         },
         "runtime": {
           "ProyectoCRPCC.Data.dll": {}
@@ -2539,7 +2636,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "Rotativa.AspNetCore": "1.2.0"
         },
         "runtime": {
           "ProyectoCRPCC.Models.dll": {}
@@ -2549,6 +2647,10 @@
         }
       },
       "ProyectoCRPCC.Utilities/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "5.0.17",
+          "Rotativa.AspNetCore": "1.2.0"
+        },
         "runtime": {
           "ProyectoCRPCC.Utilities.dll": {}
         },
@@ -2646,7 +2748,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Cors/5.0.0.0": {
+      "Microsoft.AspNetCore.Cors.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Cors.dll": {}
         },
@@ -2778,7 +2880,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Localization/5.0.0.0": {
+      "Microsoft.AspNetCore.Localization.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Localization.dll": {}
         },
@@ -2802,7 +2904,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Mvc.ApiExplorer/5.0.0.0": {
+      "Microsoft.AspNetCore.Mvc.ApiExplorer.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Mvc.ApiExplorer.dll": {}
         },
@@ -2814,7 +2916,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Mvc.Cors/5.0.0.0": {
+      "Microsoft.AspNetCore.Mvc.Cors.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Mvc.Cors.dll": {}
         },
@@ -2826,7 +2928,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Mvc/5.0.0.0": {
+      "Microsoft.AspNetCore.Mvc.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Mvc.dll": {}
         },
@@ -2844,25 +2946,25 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Mvc.Localization/5.0.0.0": {
+      "Microsoft.AspNetCore.Mvc.Localization.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Mvc.Localization.dll": {}
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Mvc.Razor/5.0.0.0": {
+      "Microsoft.AspNetCore.Mvc.Razor.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Mvc.Razor.dll": {}
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Mvc.RazorPages/5.0.0.0": {
+      "Microsoft.AspNetCore.Mvc.RazorPages.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Mvc.RazorPages.dll": {}
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Mvc.TagHelpers/5.0.0.0": {
+      "Microsoft.AspNetCore.Mvc.TagHelpers.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Mvc.TagHelpers.dll": {}
         },
@@ -3114,7 +3216,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.FileProviders.Composite/5.0.0.0": {
+      "Microsoft.Extensions.FileProviders.Composite.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.FileProviders.Composite.dll": {}
         },
@@ -3126,7 +3228,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.FileSystemGlobbing/5.0.0.0": {
+      "Microsoft.Extensions.FileSystemGlobbing.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.FileSystemGlobbing.dll": {}
         },
@@ -4262,6 +4364,13 @@
       "path": "microsoft.aspnetcore.authorization.policy/2.2.0",
       "hashPath": "microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Cors/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9CkzhCVdqV4lYDuf6jNqjUfQQ0lbnxg1npGIu8Wl7G9xsghSERgfrj7ddCmzparqZ1igD16gcTY3KyjwZczXEQ==",
+      "path": "microsoft.aspnetcore.cors/2.0.1",
+      "hashPath": "microsoft.aspnetcore.cors.2.0.1.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/5.0.17": {
       "type": "package",
       "serviceable": true,
@@ -4374,6 +4483,20 @@
       "path": "microsoft.aspnetcore.jsonpatch/2.2.0",
       "hashPath": "microsoft.aspnetcore.jsonpatch.2.2.0.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Localization/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c2u/AU2CscYYmH1nMbkYyJp5Zy2elVuZYryEEV+M0cL/aKGFfDRnQ5iTGoa4HPNELjpqhFWTGwIneeUlpJWUDg==",
+      "path": "microsoft.aspnetcore.localization/2.0.1",
+      "hashPath": "microsoft.aspnetcore.localization.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NyREVR8T77lyf5pn6FqMZky7qG/dLTbSas1EO3Cy+zLDsKhD6OrtgDJtzMDfRIfBysCoFo4bFcC38MTzKEdmtA==",
+      "path": "microsoft.aspnetcore.mvc/2.0.1",
+      "hashPath": "microsoft.aspnetcore.mvc.2.0.1.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4381,12 +4504,26 @@
       "path": "microsoft.aspnetcore.mvc.abstractions/2.2.0",
       "hashPath": "microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Mvc.ApiExplorer/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WaY906DkCyG7C/BZBLecVxNGTsXADxiv0cyaK9newWOGkIfQ0rp4UvLIijed8Tb2eJsfT99iLUBj5GvBWLxRwA==",
+      "path": "microsoft.aspnetcore.mvc.apiexplorer/2.0.1",
+      "hashPath": "microsoft.aspnetcore.mvc.apiexplorer.2.0.1.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Mvc.Core/2.2.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ALiY4a6BYsghw8PT5+VU593Kqp911U3w9f/dH9/ZoI3ezDsDAGiObqPu/HP1oXK80Ceu0XdQ3F0bx5AXBeuN/Q==",
       "path": "microsoft.aspnetcore.mvc.core/2.2.0",
       "hashPath": "microsoft.aspnetcore.mvc.core.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.Cors/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eL/FDFflChBeKLiWCDj/Cui5LUpT7bDOmjcOh5zis6bVZUmX343jpuLebItWOkONTrodngeUToJ3xTVQhSDtVQ==",
+      "path": "microsoft.aspnetcore.mvc.cors/2.0.1",
+      "hashPath": "microsoft.aspnetcore.mvc.cors.2.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Mvc.DataAnnotations/2.2.0": {
       "type": "package",
@@ -4402,6 +4539,20 @@
       "path": "microsoft.aspnetcore.mvc.formatters.json/2.2.0",
       "hashPath": "microsoft.aspnetcore.mvc.formatters.json.2.2.0.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Mvc.Localization/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sZppxMkA1ARIUuCX3AYMslZsUScxHDNheVoVJtcW2E0HJfqAPNPg1BNTG2kH/OeDnQy/ldlHeOkFE645liDFVA==",
+      "path": "microsoft.aspnetcore.mvc.localization/2.0.1",
+      "hashPath": "microsoft.aspnetcore.mvc.localization.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.Razor/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z03KbgHYWaVd5+c/nO3ncPCSc165momK+xldJus15h+cJiVl5hzb5nFRNdA2vF4JjvcH3hW/DyC8oEtFofVAlw==",
+      "path": "microsoft.aspnetcore.mvc.razor/2.0.1",
+      "hashPath": "microsoft.aspnetcore.mvc.razor.2.0.1.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Mvc.Razor.Extensions/5.0.14": {
       "type": "package",
       "serviceable": true,
@@ -4415,6 +4566,20 @@
       "sha512": "sha512-zH+PJKI2i/XYYMYqPYJeQ9FZaBH7YPaVd8+YXmYENj0jeyjNzWfV/tZLLOSL/FC5J0h36FHh8X/b+hl8cfeF9g==",
       "path": "microsoft.aspnetcore.mvc.razor.runtimecompilation/5.0.14",
       "hashPath": "microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.14.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.RazorPages/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lfRWvvJ63LdOPGt7wx+I9LvUr94ADoiJj8bMXdN3SNgYr+7yolsK6llqLG7UD9vFJC2/kSs/5uWUgGTI9JXxkA==",
+      "path": "microsoft.aspnetcore.mvc.razorpages/2.0.1",
+      "hashPath": "microsoft.aspnetcore.mvc.razorpages.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.TagHelpers/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nuBEw70GCe9Lr8bGgWnsZhdmyI6awR6H6I8ECgYjXejcRlrBcgVEriRLtu1mrGHMkdW0wWh7z9CFePihUlSfOg==",
+      "path": "microsoft.aspnetcore.mvc.taghelpers/2.0.1",
+      "hashPath": "microsoft.aspnetcore.mvc.taghelpers.2.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Mvc.ViewFeatures/2.2.0": {
       "type": "package",
@@ -4640,12 +4805,26 @@
       "path": "microsoft.extensions.fileproviders.abstractions/5.0.0",
       "hashPath": "microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.FileProviders.Composite/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/Q95H1pFJuss7np9Pp6mKxg4ornSrBnrYwNkgHnW+YRqhjfaQLVgL+X+LN95M9YeGPNA4QHJDkbrqQ/n+jYc9g==",
+      "path": "microsoft.extensions.fileproviders.composite/2.0.0",
+      "hashPath": "microsoft.extensions.fileproviders.composite.2.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.FileProviders.Embedded/5.0.17": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-sSf5oTuE/BYju9hqvwL6CSwArv76mONplyVpYV2J8Il/m2mtuabx2o3YmTeO8aa5+2JaFWZlOX+2X3fWYEp79w==",
       "path": "microsoft.extensions.fileproviders.embedded/5.0.17",
       "hashPath": "microsoft.extensions.fileproviders.embedded.5.0.17.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileSystemGlobbing/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UC87vRDUB7/vSaNY/FVhbdAyRkfFBTkYmcUoglxk6TyTojhSqYaG5pZsoP4e1ZuXktFXJXJBTvK8U/QwCo0z3g==",
+      "path": "microsoft.extensions.filesystemglobbing/2.0.0",
+      "hashPath": "microsoft.extensions.filesystemglobbing.2.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Hosting.Abstractions/2.2.0": {
       "type": "package",
@@ -4884,6 +5063,13 @@
       "sha512": "sha512-5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
       "path": "newtonsoft.json.bson/1.0.1",
       "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
+    },
+    "Rotativa.AspNetCore/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ORQwDaHPCtnk+i0sSaaN05+m+xBcQTwrV5GkhWTadE8xkQiy6ixy4KqY6ixjHAcWppaBjnlHsSLtxRFI23FOKg==",
+      "path": "rotativa.aspnetcore/1.2.0",
+      "hashPath": "rotativa.aspnetcore.1.2.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -5724,7 +5910,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Cors/5.0.0.0": {
+    "Microsoft.AspNetCore.Cors.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5834,7 +6020,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Localization/5.0.0.0": {
+    "Microsoft.AspNetCore.Localization.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5854,7 +6040,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Mvc.ApiExplorer/5.0.0.0": {
+    "Microsoft.AspNetCore.Mvc.ApiExplorer.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5864,7 +6050,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Mvc.Cors/5.0.0.0": {
+    "Microsoft.AspNetCore.Mvc.Cors.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5874,7 +6060,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Mvc/5.0.0.0": {
+    "Microsoft.AspNetCore.Mvc.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5889,22 +6075,22 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Mvc.Localization/5.0.0.0": {
+    "Microsoft.AspNetCore.Mvc.Localization.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Mvc.Razor/5.0.0.0": {
+    "Microsoft.AspNetCore.Mvc.Razor.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Mvc.RazorPages/5.0.0.0": {
+    "Microsoft.AspNetCore.Mvc.RazorPages.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Mvc.TagHelpers/5.0.0.0": {
+    "Microsoft.AspNetCore.Mvc.TagHelpers.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6114,7 +6300,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.FileProviders.Composite/5.0.0.0": {
+    "Microsoft.Extensions.FileProviders.Composite.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6124,7 +6310,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.FileSystemGlobbing/5.0.0.0": {
+    "Microsoft.Extensions.FileSystemGlobbing.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

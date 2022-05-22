@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ProyectoCRPCC.Data.Repositorio.IRepositorio;
 using ProyectoCRPCC.Models;
+using Rotativa.AspNetCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -168,6 +169,18 @@ namespace ProyectoCRPCC.Areas.Admin.Controllers
             _unidadTrabajo.Producto.Remover(productoDb);
             _unidadTrabajo.Guardar();
             return Json(new { success = true, message = "Producto Borrado Exitosamente" });
+        }
+        public IActionResult ImprimirProductos()
+        {
+            ProductoVM productoVM = new ProductoVM();
+            productoVM.ProductoLista = _unidadTrabajo.Producto.ObtenerTodos();
+            return new ViewAsPdf("ImprimirProductos", productoVM)
+            {
+                FileName = "ListaProductos" + ".pdf",
+                PageOrientation = Rotativa.AspNetCore.Options.Orientation.Landscape,
+                PageSize = Rotativa.AspNetCore.Options.Size.A4,
+                CustomSwitches = "--page-offset 9 --footer-center [page] --footer-font-size 12"
+            };
         }
 
         #endregion

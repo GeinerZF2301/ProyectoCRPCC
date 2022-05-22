@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using ProyectoCRPCC.Utilities;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebInventario</title>
+    <title>@ViewData["Title"] - CRPCC</title>
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" />
@@ -19,147 +20,235 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-5 fixed-top">
+        <nav class="navbar navbar-expand-sm text-light navbar-toggleable-sm  navbar border-bottom box-shadow mb-5 fixed-top" style="background-color: #000000;">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                 <a class="nav-link text-light text-left" asp-area="" asp-controller="Home" asp-action="Index">LOGO</a>
+                 </li>
+                 </ul>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link "text-light" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-                        </li>
-                        @*@if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Inventario))*@
+                    <ul class="navbar-nav mx-auto">
                         
+                        @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Inventario))
+                        {
+
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Mantenimiento <i class="fas fa-cogs"></i>
+                                    Mantenimiento 
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                   @* @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Registrador))*@
-                                    
+                                    @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Registrador))
+                                    {
+
                                         <a class="dropdown-item"
-                                           asp-area="Admin"
-                                           asp-controller="Sucursal"
-                                           asp-action="Index">
-                                            <i class="fas fa-home"></i>
+                                               asp-area="Admin"
+                                               asp-controller="Sucursal"
+                                               asp-action="Index">
+                                            
                                             Sucursales
                                         </a>
                                         <div class="dropdown-divider bg-light"></div>
 
                                         <a class="dropdown-item"
-                                           asp-area="Admin"
-                                           asp-controller="Categoria"
-                                           asp-action="Index">
-                                         <i class="fa-solid fa-list-check"></i>
+                                               asp-area="Admin"
+                                               asp-controller="Categoria"
+                                               asp-action="Index">
+                                            
                                             Categorías
                                         </a>
                                         <div class="dropdown-divider bg-light"></div>
                                         <a class="dropdown-item"
-                                           asp-area="Admin"
-                                           asp-controller="Servicios"
-                                           asp-action="Index">
-                                            <i class="fas fa-award"></i>
-                                            Servicios
-                                        </a>
-                                         <div class="dropdown-divider bg-light"></div>
-                                   @* @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Inventario))*@
-                                    
-                                        <a class="dropdown-item"
-                                           asp-area="Admin"
-                                           asp-controller="Producto"
-                                           asp-action="Index">
-                                            <i class="fas fa-cog"></i>
-                                            Productos
-                                        </a>
-                                     <div class="dropdown-divider bg-light"></div>
-
-                                         <a class="dropdown-item"
-                                           asp-area="Admin"
-                                           asp-controller="Cliente"
-                                           asp-action="Index">
-                                            <i class="fas fa-cog"></i>
+                                               asp-area="Admin"
+                                               asp-controller="Cliente"
+                                               asp-action="Index">
+                                            
                                             Clientes
                                         </a>
-                                         <div class="dropdown-divider bg-light"></div>
+                                        <div class="dropdown-divider bg-light"></div>
 
-                                         <a class="dropdown-item"
-                                           asp-area="Admin"
-                                           asp-controller="Empleado"
-                                           asp-action="Index">
-                                            
+                                        <a class="dropdown-item"
+                                               asp-area="Admin"
+                                               asp-controller="Empleado"
+                                               asp-action="Index">
+
                                             Empleados
                                         </a>
+
+                                        <div class="dropdown-divider bg-light"></div>
+                                    }
+                                    @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Inventario))
+                                    {
+
+                                        <a class="dropdown-item"
+                                               asp-area="Admin"
+                                               asp-controller="Producto"
+                                               asp-action="Index">
+                                            
+                                            Productos
+                                        </a>
+                                        <div class="dropdown-divider bg-light"></div>
+
+                                        <a class="dropdown-item"
+                                               asp-area="Admin"
+                                               asp-controller="Servicios"
+                                               asp-action="Index">
+                                            
+                                            Servicio
+                                        </a>
+                                    }       
                                 </div>
-                            </li>
+                              </li>
                         
-                      @* @* @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Inventario))*@
-                        
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                   asp-area="Inventario"
-                                   asp-controller="Inventario"
-                                   asp-action="Index">
-                                    Inventario
+                           }
+                        @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Inventario))
+                        {
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Servicios CRPCC
                                 </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                     @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Registrador))
+                                {
+                                    <a class="dropdown-item"
+                                           asp-area="Servicios"
+                                           asp-controller="ServicioDetalle"
+                                           asp-action="Index">
+                                        Servicios
+                                    </a>
+                                    <div class="dropdown-divider bg-light"></div>
+                                    <a class="dropdown-item"
+                                           asp-area="Servicios"
+                                           asp-controller="ServicioClienteDetalle"
+                                           asp-action="Index">
+                                        Servicios Clientes
+                                    </a>
+                                 }
+                                </div>
+
                             </li>
-                        
-                        @*@if (User.IsInRole(DS.Role_Admin))*@
-                        
+                        }
+                        @if (User.IsInRole(DS.Role_Admin))
+                        {
+
                             <li class="nav-item">
-                                <a class="nav-link"
+                                <a class="nav-link  text-light"
                                    asp-area="Admin"
                                    asp-controller="Usuario"
                                    asp-action="Index">
                                     Usuarios
                                 </a>
                             </li>
-                        
-                        @*@if (User.IsInRole(DS.Role_Admin))*@
-                        
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                   asp-area="Admin"
-                                   asp-controller="Compania"
-                                   asp-action="Index">
-                                    Compañías
-                                </a>
-                            </li>
-                        
-                        @*@if (User.IsInRole(DS.Role_Admin)
-                         || User.IsInRole(DS.Role_Inventario)
-                         || User.IsInRole(DS.Role_Ventas))*@
+                        }
+
+                        @if (User.IsInRole(DS.Role_Admin)|| User.IsInRole(DS.Role_Inventario)|| User.IsInRole(DS.Role_Ventas))
+                        {
                         <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Consultas <i class="fas fa-cogs"></i>
+                                    Consultas 
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                   @* @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Registrador))*@
+                                    @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Registrador))
+                                    {
                                     
-                                        <a class="dropdown-item"
-                                           asp-area="Admin"
-                                           asp-controller="ConsultaCategoria"
-                                           asp-action="Index">
-                                            <i class="fas fa-home"></i>
-                                            Categorias
-                                        </a>
-                                 </div>
+                                               <a class="dropdown-item"
+                                                asp-area="Admin"
+                                                asp-controller="ConsultaCategoria"
+                                                asp-action="Index">
+                                                
+                                                Categorias
+                                                </a>
+                                              <div class="dropdown-divider bg-light"></div>
+                                                <a class="dropdown-item"
+                                                   asp-area="Admin"
+                                                   asp-controller="ConsultaSucursal"
+                                                   asp-action="Index">
+                                                    
+                                                    Sucursal
+                                                </a>
+                                                <div class="dropdown-divider bg-light"></div>
+                                                <a class="dropdown-item"
+                                                   asp-area="Admin"
+                                                   asp-controller="ConsultaCliente"
+                                                   asp-action="Index">
+                                                    
+                                                    Clientes
+                                                </a>
+
+                                                <div class="dropdown-divider bg-light"></div>
+                                                <a class="dropdown-item"
+                                                   asp-area="Admin"
+                                                   asp-controller="ConsultaServicios"
+                                                   asp-action="Index">
+                             
+                                                    Servicios
+                                                </a>
+                                    }
+                                </div>
+                                
 
                           </li>
+                          }
+
+                          @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Registrador))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Reportes 
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Registrador))
+                                    {
+
+                                        <a class="dropdown-item"
+                                           asp-area="Admin"
+                                           asp-controller="Producto"
+                                           asp-action="ImprimirProductos">
+                                            Productos
+
+                                        </a>
+                                        @* <div class="dropdown-divider bg-light"></div>
+                                            <a class="dropdown-item"
+                                            asp-area="Admin"
+                                            asp-controller="ConsultaSucursal"
+                                            asp-action="Index">
+                                            <i class="fas fa-home"></i>
+                                            Sucursal
+                                            </a>
+                                            <div class="dropdown-divider bg-light"></div>
+                                            <a class="dropdown-item"
+                                            asp-area="Admin"
+                                            asp-controller="ConsultaCliente"
+                                            asp-action="Index">
+                                            <i class="fas fa-home"></i>
+                                            Clientes
+
+                                            </a>*@
+                                    }
+                                </div>
 
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Reportes</a>
                             </li>
-                        
+
+                        }
+
+
+
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
@@ -174,9 +263,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted bg-dark text-white-50 fixed-bottom">
+    <footer class="border-top footer text-muted text-light fixed-bottom" style="background-color: #000000;">
         <div class="container">
-            &copy; 2022 - Costa Rican Pest Control Company, Costa Rica.
+            Costa Rican Pest Control Company. Santa Cruz, Guanacaste, Costa Rica. &copy; 2022
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
